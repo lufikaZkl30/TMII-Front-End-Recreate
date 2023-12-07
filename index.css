@@ -33,9 +33,7 @@
 }
 
 body {
-    background-image: url(./img/Group\ 2.png);
-    margin: 0;
-    padding: 0;
+    background-image: url(img/Mask\ group.png);
 }
 
 .bg {
@@ -120,7 +118,6 @@ button:hover {
 .box {
     position: absolute;
     left: -10vh;
-    margin-top: 10vh;
     width: 600px; 
     border-radius: 50px;
     height: 130px; 
@@ -177,10 +174,15 @@ button:hover {
 }
 
 /* box 2 */
-
+.kotak {
+    position: absolute;
+    margin-top: 100vh;
+    margin-left: 40vh;
+    background-image: url(img/);
+}
 .box-2 {
     position: absolute;
-    top: 135vh;
+    top: 300vh; 
     width: 100%; 
     border-radius: 10px;
     height: 300px; 
@@ -229,9 +231,11 @@ button:hover {
 
 /* judul wb*/
 .box-3 {
-    position: relative;
+    position: absolute;
+    margin-top: 100vh;
     font-size: 20px;
-    width: 100%;
+    width: 200vh;
+    height: 10vh;
     text-align: center;
     font-family: walso;
 }
