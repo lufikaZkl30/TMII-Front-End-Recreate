@@ -6,62 +6,60 @@
     <title>Tiket Taman Mini Indonesia Indah</title>
     <script src="angularjs/angular.min.js"></script>
     <link rel="stylesheet" href="css/styletiket.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 
 <body ng-controller="ticketCtrl">
 
     <!-- Navigation Bar -->
-    <!-- <div class="navbar"> 
-        <h1 class="logo">TMII</h1>
-        <ul>
-            <li><a href="">HOME</a></li>
-            <li><a href="">ABOUT</a></li>
-            <li><a href="">REGION</a></li>
-            <li><a href="">CONTACT</a></li>
-        </ul>
-    </div> -->
     
     <!-- Title -->
-    <div>
+    <div class="headerTiket">
         <div>
-            <h3>Tiket</h3>
+            <h2>Tiket</h2>
             <h1>Taman Mini Indonesia Indah</h1>
         </div>
-        <i style="font-size:24px" class="fa">&#xf104;</i>
     </div>
 
     <!-- Ticket Card -->
-    <div class="card" ng-repeat="ticketdetail in ticketdetails">
-        <h3>Tiket Masuk {{ticketdetail.jenis}}</h3>
-        <p>{{ticketdetail.tanggal}}</p>
-        <p>Harga: IDR {{ticketdetail.harga}}</p>
+    <div class="card animate__animated animate__fadeInUp" ng-repeat="ticketdetail in ticketdetails">
+        <div class="card-content">
+            <h3>Tiket Masuk {{ticketdetail.jenis}}</h3>
+            <p>{{ticketdetail.tanggal}}</p>
+            <h3 style="color:blue">Harga: {{ticketdetail.harga | currency:'Rp ':0}}</h3>
 
-        <h4>Syarat dan Ketentuan:</h4>
-        <ul class="isi-snk">
-            <li ng-repeat="snkItem in ticketdetail.snk">{{snkItem.isi}}</li>
-        </ul>
-        <div class="quantity">
-            <button ng-click="min($index)" ng-disabled="clickcounter === 0">-</button>
-            <p>{{ticketdetail.quantity}}</p>
-            <button ng-click="add($index)">+</button>
+            <h4>Syarat dan Ketentuan:</h4>
+            <ul class="isi-snk">
+                <li ng-repeat="snkItem in ticketdetail.snk">{{snkItem.isi}}</li>
+            </ul>
+            <div class="quantity">
+                <button class="btnquantity" ng-click="min($index)" ng-disabled="clickcounter === 0">-</button>
+                <p>{{ticketdetail.quantity}}</p>
+                <button class="btnquantity"  ng-click="add($index)">+</button>
+                <button class="btndelete" ng-click="delete($index)">Delete</button>
+            </div>
         </div>
     </div>
 
     <!-- Total -->
-    <div class="grandtotal">
-        <p>GrandTotal: {{hitungKeseluruhan()}}</p>
+    <div class="footerTicket">
+        <div class="grandtotal">
+            <h3>Total: {{hitungKeseluruhan() | currency:'Rp ':0}}</h3>
+            <button class="btnTotal" ng-click="toggleForm()">Beli Tiket</button>
+        </div>
     </div>
     
-
     <script>
         var app = angular.module('ticketing', []);
 
         app.controller('ticketCtrl', function ($scope) {
+            $scope.showFormPopup = false;
             $scope.ticketdetails = [{
                 jenis: 'Orang',
                 tanggal: $scope.date,
                 harga: '25000',
                 quantity: 0,
+                image:'',
                 snk: [
                     { isi: 'Tiket berlaku hanya 1 kali sesuai tanggal kunjungan yang dipilih'},
                     { isi: 'Tiket tidak dapat dikembalikan (non-refundable)'},
@@ -73,8 +71,9 @@
                 tanggal: $scope.date,
                 harga: '35000',
                 quantity: 0,
+                image:'',
                 snk: [
-                { isi: 'Tiket berlaku hanya 1 kali sesuai tanggal kunjungan yang dipilih'},
+                    { isi: 'Tiket berlaku hanya 1 kali sesuai tanggal kunjungan yang dipilih'},
                     { isi: 'Tiket tidak dapat dikembalikan (non-refundable)'},
                     { isi: 'Belum termasuk dengan tiket pintu masuk (perorangan)'},
                     { isi: 'Anak berusia 2 tahun ke atas atau dengan tinggi badan di atas 80cm dikenakan biaya tiket masuk'},
@@ -85,8 +84,9 @@
                 tanggal: $scope.date,
                 harga: '15000',
                 quantity: 0,
+                image:'',
                 snk: [
-                { isi: 'Tiket berlaku hanya 1 kali sesuai tanggal kunjungan yang dipilih'},
+                    { isi: 'Tiket berlaku hanya 1 kali sesuai tanggal kunjungan yang dipilih'},
                     { isi: 'Tiket tidak dapat dikembalikan (non-refundable)'},
                     { isi: 'Belum termasuk dengan tiket pintu masuk (perorangan)'},
                     { isi: 'Anak berusia 2 tahun ke atas atau dengan tinggi badan di atas 80cm dikenakan biaya tiket masuk'},
@@ -98,6 +98,7 @@
                     tanggal: $scope.date,
                     harga: '25000',
                     quantity: 0,
+                    image:'',
                     snk: [
                     { isi: 'Tiket berlaku hanya 1 kali sesuai tanggal kunjungan yang dipilih'},
                     { isi: 'Tiket tidak dapat dikembalikan (non-refundable)'},
@@ -111,12 +112,13 @@
                     tanggal: $scope.date,
                     harga: '35000',
                     quantity: 0,
+                    image:'',
                     snk: [
                     { isi: 'Tiket berlaku hanya 1 kali sesuai tanggal kunjungan yang dipilih'},
                     { isi: 'Tiket tidak dapat dikembalikan (non-refundable)'},
                     { isi: 'Sudah termasuk dengan tiket pintu masuk (perorangan)'},
                     { isi: 'Anak berusia 2 tahun ke atas atau dengan tinggi badan di atas 80cm dikenakan biaya tiket masuk'},
-                    { isi: 'Jadwal Masuk Khusu Sepeda: 06.00 - 08.30; 15.00 - 18.00'},
+                    { isi: 'Jadwal Masuk Khusus Sepeda: 06.00 - 08.30; 15.00 - 18.00'},
                     { isi: 'Tidak berlaku untuk Sepeda Jenis Listrik'},
                     { isi: 'Tiket ini bukan tiket penyewaan Sepeda'},
                     { isi: 'Kendaraan pengunjung diparkirkan di area parkir yang telah disediakan'},
@@ -126,6 +128,7 @@
                     tanggal: $scope.date,
                     harga: '60000',
                     quantity: 0,
+                    image:'',
                     snk: [
                     { isi: 'Tiket berlaku hanya 1 kali sesuai tanggal kunjungan yang dipilih'},
                     { isi: 'Tiket tidak dapat dikembalikan (non-refundable)'},
@@ -156,6 +159,10 @@
                     grandTotal += $scope.hitungTotal($scope.ticketdetails[i]);
                 }
                 return grandTotal;
+            };
+            
+            $scope.delete = function (index) {
+                $scope.ticketdetails[index].quantity = 0;
             };
         });
     </script>
