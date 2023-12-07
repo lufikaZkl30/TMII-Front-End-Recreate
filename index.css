@@ -248,10 +248,12 @@ button:hover {
 /* img ada 7 */
 .slider {
     width: 800px;
-    height: 400px;
+    height: 500px;
     background: url(img/1500x1000-angling.jpg);
     margin: 100px auto;
-    animation: slide 10s infinite;
+    animation: slide 15s infinite;
+    background-position: center;
+    border-radius: 20px;
 }
 
 @keyframes slide{
