@@ -1,9 +1,8 @@
 body {
-    /* background: url(../img/img\ anjungan/.bg-1); */
-    background-color: grey;
+    background-image: url("../img/Group 2.png");
+    background-size: cover;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-repeat: no-repeat;
-
 }
 
 .container{
@@ -16,8 +15,7 @@ body {
     /* width: 1260px; */
     width: 1285px;
     height: 300px;
-    border-radius: 4%;
-    
+    border-radius: 4%;    
 }
 .judulJelajah {
     text-align: left;
@@ -30,6 +28,7 @@ body {
 .deskripsiJelajah { 
     margin-left: 180px;
     text-align: left;
+    color: black;
 }
 
 .button { 
@@ -283,4 +282,9 @@ body {
     margin-right: 15px;
     max-width: 300px;
     max-height: 700px; 
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
 }
