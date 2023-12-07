@@ -246,72 +246,37 @@ button:hover {
 }
 
 /* img ada 7 */
-.slide-7 {
-    min-height: 100vh;
-    display: grid;
-    place-items: center;
-}
-
 .slider {
-    height: 250px;
-    margin: auto;
-    position: relative;
-    width: 90%;
-    display: grid;
-    place-items: center;
+    width: 800px;
+    height: 400px;
+    background: url(img/1500x1000-angling.jpg);
+    margin: 100px auto;
+    animation: slide 10s infinite;
 }
 
-.slide-track {
-    display: flex;
-    width: calc(250px * 18);
-}
-
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
+@keyframes slide{
+    15% {
+        background: url(img/1500x1000-angling.jpg);
+    }
+    30% {
+        background: url(img/1500x1000-cagv1.jpg);
+    }
+    45% {
+        background: url(img/1500x1000-jagatsatwa.jpg);
+    }
+    55% {
+        background: url(img/1500x1000-keretagantung.jpg);
+    }
+    65% {
+        background: url(img/1500x1000-merchstore.jpg);
+    }
+    80% {
+        background: url(img/1500x1000-musindo-1.jpg);
+    }
+    95% {
+        background: url(img/1500x1000-tirtacerita-2.jpg);
     }
     100% {
-        transform: translateX(calc(-250px * 9));
+        background: url(img/1500x1000-angling.jpg);
     }
-}
-
-.slide {
-    height: 200px;
-    width: 250px;
-    display: flex;
-    align-items: center;
-    padding: 15px;
-    perspective: 100px;
-}
-
-.img-2 {
-    width: 100%;
-    transition: transform 1s;
-}
-
-.img-2:hover {
-    transform: translateZ(20px);
-}
-
-.slider::before,
-.slider::after {
-    background: linear-gradient(to right, white) 0%;
-    rgba(255,255,255,0) 100%);
-    content: '';
-    height: 100%;
-    position: 100%;
-    position: absolute;
-    width: 15%;
-    z-index: 2;
-}
-
-.slider::before {
-    left: 0;
-    top: 0;
-}
-
-.slider::after {
-    right: 0;
-    top: 0;
-    transform: rotateZ(180deg);
 }
