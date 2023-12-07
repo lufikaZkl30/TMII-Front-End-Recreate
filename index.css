@@ -246,7 +246,13 @@ button:hover {
 }
 
 /* img ada 7 */
-.slider {
+
+
+
+
+
+
+/* .slider {
     width: 800px;
     height: 500px;
     background: url(img/1500x1000-angling.jpg);
@@ -261,7 +267,7 @@ button:hover {
         background: url(img/1500x1000-angling.jpg);
     }
     30% {
-        background: url(img/1500x1000-cagv1.jpg);
+        background: url(img/1500x1000-angling.jpg);
     }
     45% {
         background: url(img/1500x1000-jagatsatwa.jpg);
@@ -281,4 +287,4 @@ button:hover {
     100% {
         background: url(img/1500x1000-angling.jpg);
     }
-}
+} */
