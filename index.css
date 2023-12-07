@@ -54,7 +54,6 @@ body {
     background: rgb(0, 0, 0);
 }
 
-
 .logo {
     width: 100px;
     padding: 10px;
@@ -88,7 +87,6 @@ li a:hover {
 .navbar a:hover {
     color: rgb(49, 40, 113);
 }
-
 
 /* button beli */
 .btn-bt {
@@ -174,24 +172,26 @@ button:hover {
 }
 
 /* box 2 */
-.kotak {
-    position: absolute;
-    margin-top: 100vh;
-    margin-left: 40vh;
-    background-image: url(img/);
-}
 .box-2 {
     position: absolute;
-    top: 300vh; 
+    top: 100vh; 
     width: 100%; 
     border-radius: 10px;
-    height: 300px; 
+    height: 100px; 
     background-color: #000000; 
 }
+.kotak {
+    position: absolute;
+    margin-top: 110vh;
+    margin-left: 40vh;
+    width: 300vh;
+    height: 100%;
+}
+
 
 .wb {
     position: absolute;
-    top: 10%; 
+    top: 50%; 
     left: 50%;
     transform: translate(-50%, -50%); 
     color: #ffffff; 
@@ -229,7 +229,7 @@ button:hover {
     }
 }
 
-/* judul wb*/
+/* judul ac*/
 .box-3 {
     position: absolute;
     margin-top: 100vh;
@@ -240,7 +240,7 @@ button:hover {
     font-family: walso;
 }
 
-/* wajah baru */
+/* acara mendatang */
 .am {
     background-color: #000000;
     color: #fff;
@@ -250,3 +250,9 @@ button:hover {
 
 /* img ada 7 */
 
+
+
+
+
+
+/* jelajahi */
