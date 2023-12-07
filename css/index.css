@@ -10,7 +10,7 @@
 }
 
 .info-1{
-    background-image: url('img/Mask-group.png');
+    background-image: url('../img/Mask-group.png');
     background-position: center;
     display: flex;
     padding: 25px;
@@ -31,7 +31,7 @@
 }
 
 .isiKonteks{
-    background-image: URL('img/Group 2.png');
+    background-image: URL('../img/Group 2.png');
 }
 .box-2, .box-3, .box-4{
     width: 100%; 
