@@ -11,9 +11,10 @@ $(document).ready(function() {
   });
 });
 
-// pindah halaman 
-// button on to halaman baru
 // button on to halaman baru
 document.getElementById('btn-bt').addEventListener('click', function() {
   window.location.href = 'tiket.html';
 });
+
+// akan datang 
+
