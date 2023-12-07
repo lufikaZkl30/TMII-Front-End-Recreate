@@ -308,14 +308,27 @@ button:hover {
     letter-spacing: 5px;
 }
 
-.image2{
+.image-list2 .img-2{
+    width: 100px;
+}
+
+.img-2{
     width: 200px;
+    margin: 10px 25px;
     height: 230px;
     display: inline-block;
     border-radius: 20px;
     box-sizing: border-box;
     cursor: pointer;
     margin: 10px 25px;
+}
+
+.img2:hover {
+    transform: translateY(-10px);
+}
+
+.image:hover {
+    transform: translateX(-10px);
 }
 
 .kotak4 {
