@@ -1,69 +1,118 @@
-/* body {
+body {
     font-family: 'Arial', sans-serif;
-    background-color: #aeaeae;
+    background-image: url('../img/bg-cream.png');
     margin: 0;
     padding: 0;
 }
 
-h3, h1 {
+h1, h2 {
     text-align: center;
 }
 
-.card {
-    background-color: #fff;
+.card-content {
+    background-color: #fff;;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.537);
     margin: 20px auto;
     padding: 20px;
     max-width: 600px;
 }
 
-.card h3 {
+.card-content h3 {
     color: #333;
 }
 
-.card p {
+.card-content p {
     color: #555;
 }
 
-.card button {
+.card-content button {
     background-color: #4CAF50;
     color: white;
     border: none;
     padding: 10px 15px;
-    margin-top: 10px;
     border-radius: 4px;
     cursor: pointer;
 }
 
-.card button:hover {
+.card-content button:hover {
     background-color: #45a049;
 }
 
-.card ol {
+.card-content button:last-child {
+    background-color: #e74c3c;
+}
+
+.card-content button:last-child:hover {
+    background-color: #c0392b;
+}
+
+
+.card-content ol {
     list-style-type: none;
     padding: 0;
 }
 
-.card li {
+.card-content li {
     margin-bottom: 10px;
+    text-align: justify;
+    margin-right: 20px;
 }
 
-.card span {
+.card-content span {
     display: block;
     margin-top: 10px;
 }
 
-.card button:last-child {
-    background-color: #e74c3c;
+
+.quantity{
+    display: flex;
+    align-items: center;
+    justify-content: end;    
 }
 
-.card button:last-child:hover {
-    background-color: #c0392b;
+.btnquantity{
+    margin-left:15px;
+    margin-right: 15px;
 }
 
-/* .grandtotal{
-    padding-bottom: 50px;
-    overflow: hidden;
+.grandtotal {
     position: fixed;
-} */ 
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(20, 20, 20);
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+}
+
+.invoice-popup{
+    background-color: yellow;
+}
+
+.btnTotal{
+    width: 100px;
+    height: 30px;
+    size: 30px;
+    margin-bottom: 15px;
+}
+
+.footerTicket{
+    height: 120px;
+}
+
+
+.form-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    border: 3px solid #f1f1f1;
+    background-color: #fefefe;
+    padding: 20px;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+}
