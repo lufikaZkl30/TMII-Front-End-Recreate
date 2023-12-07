@@ -130,7 +130,7 @@ button:hover {
     transform: translate(-60%, -50%); 
     color: #ffffff; 
     font-size: 33px; 
-    font-family: walto;
+    font-family: ost;
 }
 
 .text-1 {
@@ -142,7 +142,7 @@ button:hover {
     width: 50%;
     height: 25%;
     font-size: 25px;
-    font-family: reguler;
+    font-family: ost;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5),
     -2px -2px 4px rgba(255, 0, 0, 0.5);
 }
@@ -309,13 +309,12 @@ button:hover {
 }
 
 .image-list2 .img-2{
-    width: 100px;
+    position: absolute;
+    width: 90px;
 }
 
-.img-2{
-    width: 200px;
+.image-last{
     margin: 10px 25px;
-    height: 230px;
     display: inline-block;
     border-radius: 20px;
     box-sizing: border-box;
@@ -327,9 +326,6 @@ button:hover {
     transform: translateY(-10px);
 }
 
-.image:hover {
-    transform: translateX(-10px);
-}
 
 .kotak4 {
     position: absolute;
