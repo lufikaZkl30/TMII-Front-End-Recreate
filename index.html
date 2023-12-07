@@ -24,8 +24,17 @@
         <div class="navbar">
             <img class="logo" src="./img/TMII_Logo_-_Blue.png" hreg>
             <ul class="content">
-                <li><a href="jelajah/anjungan.html" id="beranda">Beranda</a></li>
-                <li><a href="./jelajah/anjungan.html" id="jelajah">Jelajah</a></li>
+                <li><a href="" id="beranda">Beranda</a></li>
+                <li class="dropdown">
+                    <a href="#" id="jelajah">Jelajah</a>
+                    <div class="dropdown-content">
+                        <a href="jelajah/anjungan.html">Anjungan</a>
+                        <a href="jelajah/duniafaunaflora.html">Dunia Fauna & Flora</a>
+                        <a href="jelajah/museum.html">Museum</a>
+                        <a href="jelajah/rumahibadah.html">Wahana Rekreasi</a>
+                        <a href="jelajah/wahanarekreasi.html">Rumah Ibadah</a>
+                    </div>
+                </li>
                 <li><a href="./contact.html" id="hubungi">Hubungi Kami</a></li>
                 <li><button class="btn-bt" id="btn-bt">Beli Tiket</button></li>
             </ul>
@@ -49,12 +58,13 @@
     </div>
 
     <div class="isiKonteks">
-    <!-- acara datang -->
+
+    <!-- wajah baru -->
     <div class="box-2">
         <h3 class="wb">WAJAH BARU</h3>
     </div>
     <div class="kotak">
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div id="carouselExampleSlidesOnly" class="carousel slide container-fluid d-flex justify-content-center align-items-center" data-bs-ride="carousel">
             <div class="carousel-inner" style="width: 800px;">
                 <div class="carousel-item active">
                     <img src="img/1500x1000-angling.jpg" class="d-block w-100" alt="img/1500x1000-angling.jpg">
@@ -81,8 +91,7 @@
         </div>
     </div>
 
-
-
+    <!-- acara mendatang -->
     <div class="box-3">
         <h3 class="am">ACARA MENDATANG</h3>
     </div>
@@ -95,8 +104,7 @@
         </ul>
     </div>
 
-
-
+    <!-- jelajah dan rekreasi -->
     <div class="box-4">
         <h3 class="jdr">JELAJAH DAN REKREASI</h3>
     </div>
@@ -112,7 +120,7 @@
         </ul>
     </div>
 
-    <!-- <div class="slider-container">
+    <div class="slider-container">
         <div class="box-2">
             <div class="slider-wrapper">
                 <div class="slide"><img src="img/1500x1000-angling.jpg" alt="Gambar 1"></div>
@@ -124,7 +132,7 @@
                 <div class="slide"><img src="img/1500x1000-tirtacerita-2.jpg" alt="Gambar 7"></div>
             </div>
         </div>
-    </div>-->
+    </div>
     <script src="javascript/index.js"></script>
 </div>
 </body>
