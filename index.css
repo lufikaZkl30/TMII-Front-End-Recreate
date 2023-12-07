@@ -275,43 +275,47 @@ button:hover {
 
 }
 
-/* jelajah dan rekreasi */
-.card {
-    width: 200px;
-    height: 230px;
-    display: inline-block;
-    border-radius: 10px;
-    padding: 15px 25px;
-
-}
-
-
-
-
-
-
-
-/* footer */
-.footer {
-    background-color: rgba(0, 0, 0, 0.526);
-    color: #fff;
+/*Judul JR*/
+.box-4 {
+    position: absolute;
+    margin-top: 350vh;
+    font-size: 20px;
+    width: 200vh;
+    height: 100vh;
     text-align: center;
-    position: fixed;
-    font-size: 15px;
-    bottom: 0;
-    width: 100%;
-    height: 0vh;
-    padding: 5vh;
+    font-family: walso;
+
+}
+/* jelajah dan rekreasi */
+.box-4 {
+    position: absolute;
+    top: 10vh; 
+    width: 100%; 
+    border-radius: 10px;
+    height: 120px; 
+    background-color: #000000; 
 }
 
+.jdr {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    color: #ffffff; 
+    font-size: 33px; 
+    font-family: judul;
+    letter-spacing: 5px;
+}
 
+.card {
+    justify-content: center;
+    margin: 40px;
+    margin-left: -10px;
+}
 
+.kotak4 {
+    position: absolute;
+    left: 30vh;
+    top: 380vh;
 
-
-
-
-
-
-
-
-
+}
