@@ -11,7 +11,6 @@ body{
     font-weight: 700;
     margin: 0;
     padding: 0;
-
 }
 
 .contact .heading h2 span {
@@ -20,9 +19,9 @@ body{
 
 .contact .heading p {
     font-size: 15px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.7;
-    color: #999999;
+    color: #787878;
     margin: 20px 0 60px;
     padding: 0;
 }
@@ -76,7 +75,13 @@ body{
 
 .contact .content .info h4 span {
     font-size: 13px;
-    font-weight: 300;
-    color: #999999;
+    font-weight: 450;
+    color: #787878;
 }
 
+.col-md-5{
+    background-color: white;
+    border-radius: 15px;
+    margin:10px;
+    padding:30px;
+}
