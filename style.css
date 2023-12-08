@@ -44,7 +44,7 @@ body {
 }
 
 /* content */
-.content {
+.content2 {
     width: 100%;
     position: absolute;
     color: #fff;
@@ -52,7 +52,7 @@ body {
     transform: translateY(-50%);
 }
 
-.content h1{
+.content2 h1{
     margin-left: 10vh;
     margin-top: 10px;
     font-size: 40px;

@@ -28,6 +28,11 @@
     color: white;
     padding-left: 100px;
     padding-right: 80px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.jdl{
+    font-weight: 400;
 }
 
 .isiKonteks{
